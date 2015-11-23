@@ -1,0 +1,128 @@
+html, body {
+  background: #1C1C1F;
+  height: 100%;
+}
+#app {
+  max-width: 370px;
+  background: white;
+  margin: 8px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+nav {
+  margin-bottom: 12px;
+}
+fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+legend {
+  display: none;
+}
+.row {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.centerRow {
+  justify-content: center;
+}
+fieldset .row:not(:last-child) {
+  margin-bottom: 5px;
+}
+fieldset .row {
+}
+label {
+  flex: 1 1 50px;
+  text-align: center;
+}
+label:not(:last-child) {
+  margin-right: 2px;
+}
+input[type='radio'] {
+  display: none;
+}
+input[type='radio'] + span {
+  padding: 5px;
+  border: 1px solid black;
+  margin: 1px;
+  display: block;
+}
+input[type='radio']:checked + span {
+  border: 1px solid blue;
+}
+input[type='radio'] + span:hover {
+  margin: 0;
+  border-width: 2px;
+}
+input[type='search'] {
+  flex: 1 1 auto;
+  margin: 0 1px;
+  padding: 2px 5px 2px 5px;
+}
+section {
+}
+ul {
+  margin: 0 1px;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+li:not(:last-child){
+  margin-bottom: 4px;
+}
+li a {
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: black;
+  border: 1px solid grey;
+  padding: 15px;
+  overflow: hidden;
+  /* Allow hovering to offset element without resizing. */
+  box-sizing: border-box;
+  width: 100%;
+}
+li a:hover {
+  margin-left: 4px;
+}
+li a img {
+  flex: 0 0 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+li a .column {
+  flex: 1 1 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+li a span {
+  flex: 1 1 auto;
+  font-size: 1.1rem;
+  padding: 0 5px;
+}
+li a span:last-child {
+  font-size: 0.8rem;
+  font-style: italic;
+  padding-top: 5px;
+}
+.placeholderLogo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: grey;
+  margin-right: 10px;
+}
+.online a {
+  border-color: green;
+  border-width: 2px;
+  padding: 14px;
+}
+.hidden {
+  display: none;
+}

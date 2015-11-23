@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Tempurturtul">
+    <title>Twitch Streamers</title>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id='app'>
+      <nav>
+        <fieldset>
+          <legend>Visibile Streams</legend>
+          <div class='row centerRow'>
+            <label><input type='radio' name='visibility' value='all' checked><span>All</span></label>
+            <label><input type='radio' name='visibility' value='online'><span>Online</span></label>
+            <label><input type='radio' name='visibility' value='offline'><span>Offline</span></label>
+          </div>
+          <div class='row'>
+            <input type='search' placeholder='Search'>
+          </div>
+        </fieldset>
+      </nav>
+
+      <!-- Stream list. -->
+      <section>
+        <ul>
+          <!--
+            <li id='Name' class='online'>
+              <a class='row' target='_blank' href='#'>
+                <div class='placeholderLogo'></div>
+                <img src='#'>
+                <div class='column'>
+                  <span>Name</span>
+                  <span>Status</span>
+                </div>
+              </a>
+            </li>
+          -->
+        </ul>
+      </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
