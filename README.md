@@ -1,4 +1,4 @@
-# Twitch streamers
+# Twitch Streamers
 
 Built in July of 2015.
 
