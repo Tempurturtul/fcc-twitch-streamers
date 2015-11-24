@@ -1,0 +1,37 @@
+{
+  "name": "twitch-streamer-status",
+  "description": "This web app interfaces with Twitch.tv's public API to display the real-time status of streamers.",
+  "version": "1.0.0",
+  "private": true,
+  "author": "https://github.com/Tempurturtul",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tempurturtul/twitch-status.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tempurturtul/twitch-status/issues"
+  },
+  "engines": {
+    "node": "^4.2.2"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "connect-livereload": "^0.5.3",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-live-server": "0.0.29",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.4.2",
+    "karma": "^0.13.15",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.2.1",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "mocha": "^2.3.4",
+    "phantomjs": "^1.9.18"
+  }
+}
