@@ -39,6 +39,8 @@
     function add() {
       dataservice.addStreamer(vm.toAdd)
         .then(updateStreamers);
+
+      vm.toAdd = '';
     }
 
     function remove(name) {

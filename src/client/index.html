@@ -17,8 +17,87 @@
       <p class='browserupgrade'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <!-- The app container. -->
     <div ng-controller='StreamersController as vm'>
-      <p ng-repeat='streamer in vm.streamers'>{{streamer.displayName}}</p>
+      <!-- Controls. -->
+      <header>
+        <!-- Search options. -->
+        <form>
+          <!-- Search Bar -->
+          <div class='searchBar'>
+            <input type='search' ng-model='vm.filterOptions.name' ng-change='vm.filter()'>
+          </div>
+          <!-- All | Online | Offline -->
+          <div class='optionsBar'>
+            <label><input type='radio' class='visuallyhidden' ng-model='vm.filterOptions.state' value='' ng-change='vm.filter()'>All</label>
+            <label><input type='radio' class='visuallyhidden' ng-model='vm.filterOptions.state' value='online' ng-change='vm.filter()'>Online</label>
+            <label><input type='radio' class='visuallyhidden' ng-model='vm.filterOptions.state' value='offline' ng-change='vm.filter()'>Offline</label>
+          </div>
+        </form>
+        <!-- Remove. -->
+        <div ng-repeat='streamer in vm.streamers'>
+          <button ng-click='vm.remove(streamer.name)'><i class='fa fa-times-circle-o'></i></button><span>{{streamer.name}}</span>
+        </div>
+        <!-- Add. -->
+        <form>
+          <button ng-click='vm.add()'><i class='fa fa-plus-square'></i></button><input ng-model='vm.toAdd' type='text'>
+        </form>
+      </header>
+      <!-- Main content. -->
+      <main>
+        <!-- Title. -->
+        <h1>
+          Tracked Streamers
+        </h1>
+        <!-- Streamers. -->
+        <div class='streamer' ng-repeat='streamer in vm.streamers'>
+          <!-- Top. -->
+          <div>
+            <!-- Left. -->
+            <div>
+              <!-- Logo and display name. -->
+              <h2>{{streamer.displayName}}</h2>
+              <!-- Status. -->
+              <!-- Online state. -->
+            </div>
+            <!-- Right. -->
+            <div>
+              <!-- Video banner or preview. -->
+              <!-- Game(?). -->
+              <!-- Viewers(?). -->
+            </div>
+          </div>
+          <!-- Bottom. -->
+          <div>
+            <!-- Title. -->
+            <h3>Recorded Videos</h3>
+            <!-- Scroller. -->
+            <div class='scroller'>
+              <!-- Navigate left button. -->
+              <button>&lt;</button>
+              <!-- Contents. -->
+              <div>
+                <!-- Navigable container. -->
+                <div>
+                  <!-- Recorded videos. -->
+                  <div class='video' ng-repeat='video in streamer.videos'>
+                    <!-- Title. -->
+                    <h4>{{video.title}}</h4>
+                    <!-- Preview and overlay with title, description, duration, and age. -->
+                    <div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Navigate right button. -->
+              <button>&gt;</button>
+            </div>
+          </div>
+          <!-- Expand/Collapse button. -->
+          <button>v</button>
+        </div>
+      </main>
     </div>
 
     <script src='vendor/angular.min.js'></script>
