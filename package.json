@@ -1,37 +1,36 @@
 {
-  "name": "twitch-streamer-status",
-  "description": "This web app interfaces with Twitch.tv's public API to display the real-time status of streamers.",
+  "name": "fcc-twitch-streamers",
   "version": "1.0.0",
+  "description": "An AngularJS learning project; this web app interfaces with Twitch.tv's public API to display the real-time status of streamers.",
   "private": true,
-  "author": "https://github.com/Tempurturtul",
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Tempurturtul/twitch-status.git"
+    "url": "git+https://github.com/Tempurturtul/fcc-twitch-streamers.git"
   },
-  "bugs": {
-    "url": "https://github.com/Tempurturtul/twitch-status/issues"
-  },
-  "engines": {
-    "node": "^4.2.2"
-  },
-  "dependencies": {
-    "express": "^4.13.3"
-  },
+  "author": "Tempurturtul",
+  "license": "MIT",
+  "homepage": "https://github.com/Tempurturtul/fcc-twitch-streamers/tree/angular-refactor#readme",
   "devDependencies": {
-    "chai": "^3.4.1",
-    "connect-livereload": "^0.5.3",
+    "browser-sync": "^2.10.0",
+    "del": "^2.2.0",
     "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-jshint": "^1.12.0",
-    "gulp-live-server": "0.0.29",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.4.2",
-    "karma": "^0.13.15",
-    "karma-chai": "^0.1.0",
-    "karma-mocha": "^0.2.1",
-    "karma-phantomjs-launcher": "^0.2.1",
-    "mocha": "^2.3.4",
-    "phantomjs": "^1.9.18"
+    "gulp-cssnano": "^2.0.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-jsonlint": "^1.1.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-replace": "^0.5.4",
+    "gulp-rev-all": "^0.8.22",
+    "gulp-uglify": "^1.5.1",
+    "gulp-uncss": "^1.0.4",
+    "gulp-useref": "^3.0.5",
+    "imagemin-pngquant": "^4.2.0",
+    "jshint": "^2.8.0",
+    "merge-stream": "^1.0.0",
+    "psi": "^2.0.2",
+    "run-sequence": "^1.1.5"
   }
 }

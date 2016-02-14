@@ -112,19 +112,19 @@ h1, h2, h3, h4 {
 }
 
 /* App */
-body > div:first-of-type {
+#app {
   display: flex;
 }
 
 /* Controls */
-body > div:first-of-type > header {
+header {
   border-right: solid black 1px;
   flex: 0 0 250px;
   padding: 5px;
 }
 
 /* Controls: Direct Children */
-body > div:first-of-type > header > *:not(:last-child) {
+header > *:not(:last-child) {
   margin-bottom: 4px;
 }
 
@@ -146,42 +146,46 @@ body > div:first-of-type > header > *:not(:last-child) {
   background: #EEE;
 }
 
+.selected {
+  background: #E0E0E0;
+}
+
 /* Controls: Removes */
-body > div:first-of-type > header > div {
+header > div {
   display: flex;
 }
 
 /* Controls: Removes: Remove Streamer Button */
-body > div:first-of-type > header > div > button {
+header > div > button {
   border: none;
   background: none;
   flex: 0 0 auto;
 }
 
 /* Controls: Removes: Streamer Name */
-body > div:first-of-type > header > div > span {
+header > div > span {
   flex: 1 1 auto;
 }
 
 /* Controls: Add */
-body > div:first-of-type > header > form:last-of-type {
+header > form:last-of-type {
   display: flex;
 }
 
 /* Controls: Add: Add Streamer Button */
-body > div:first-of-type > header > form:last-of-type > button {
+header > form:last-of-type > button {
   border: none;
   background: none;
   flex: 0 0 auto;
 }
 
 /* Controls: Add: Add Streamer Input*/
-body > div:first-of-type > header > form:last-of-type > input {
+header > form:last-of-type > input {
   flex: 1 1 auto;
 }
 
 /* Main */
-body > div:first-of-type > main {
+main {
   flex: 1 1 auto;
 }
 
@@ -235,16 +239,17 @@ body > div:first-of-type > main {
   border: solid black 1px;
   flex: 1 1 auto;
   position: relative;
-/*  overflow: hidden; */
+  /*overflow: hidden; */
 }
 
 /* Contents: Navigable Contents */
-.scroller > div > div {
+.navigable {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   white-space: nowrap;  /* Prevent contents from wrapping. */
+  z-index: -1;
 }
 
 .video {

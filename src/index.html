@@ -8,8 +8,11 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- Font Awesome -->
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+    <!-- build:css styles.min.css -->
     <link rel='stylesheet' href='content/normalize.css'>
     <link rel='stylesheet' href='content/main.css'>
+    <!-- endbuild -->
   </head>
   <body ng-app='app'>
 
@@ -18,7 +21,7 @@
     <![endif]-->
 
     <!-- The app container. -->
-    <div ng-controller='StreamersController as vm'>
+    <div id='app' ng-controller='StreamersController as vm'>
       <!-- Controls. -->
       <header>
         <!-- Search options. -->
@@ -29,9 +32,9 @@
           </div>
           <!-- All | Online | Offline -->
           <div class='optionsBar'>
-            <label><input type='radio' class='visuallyhidden' ng-model='vm.filterOptions.state' value='' ng-change='vm.filter()'>All</label>
-            <label><input type='radio' class='visuallyhidden' ng-model='vm.filterOptions.state' value='online' ng-change='vm.filter()'>Online</label>
-            <label><input type='radio' class='visuallyhidden' ng-model='vm.filterOptions.state' value='offline' ng-change='vm.filter()'>Offline</label>
+            <label ng-class="{selected: !vm.filterOptions.state}"><input type='radio' class='visuallyhidden' ng-model='vm.filterOptions.state' value='' ng-change='vm.filter()'>All</label>
+            <label ng-class="{selected: vm.filterOptions.state=='online'}"><input type='radio' class='visuallyhidden' ng-model='vm.filterOptions.state' value='online' ng-change='vm.filter()'>Online</label>
+            <label ng-class="{selected: vm.filterOptions.state=='offline'}"><input type='radio' class='visuallyhidden' ng-model='vm.filterOptions.state' value='offline' ng-change='vm.filter()'>Offline</label>
           </div>
         </form>
         <!-- Remove. -->
@@ -78,7 +81,7 @@
               <!-- Contents. -->
               <div>
                 <!-- Navigable container. -->
-                <div>
+                <div class='navigable'>
                   <!-- Recorded videos. -->
                   <div class='video' ng-repeat='video in streamer.videos'>
                     <!-- Title. -->
@@ -100,8 +103,19 @@
       </main>
     </div>
 
+    <!-- build:js angular.min.js -->
+    <!-- Vendor. -->
     <script src='vendor/angular.min.js'></script>
     <script src='vendor/angular-cookies.min.js'></script>
-    <script src='app.min.js'></script>
+
+    <!-- Modules. -->
+    <script src='app/app.module.js'></script>
+    <script src='app/core/core.module.js'></script>
+    <script src='app/streamers/streamers.module.js'></script>
+
+    <!-- Other. -->
+    <script src='app/core/dataservice.js'></script>
+    <script src='app/streamers/streamers.controller.js'></script>
+    <!-- endbuild -->
   </body>
 </html>
