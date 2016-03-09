@@ -1,6 +1,6 @@
 # Twitch Streamers - Angular Refactor
 
-This is an incomplete but functional AngularJS refactor of the [Twitch Streamers project](https://github.com/Tempurturtul/fcc-twitch-streamers).
+This is an incomplete but functional AngularJS refactor of the [Twitch Streamers project](https://github.com/Tempurturtul/fcc-twitch-streamers). In addition to using AngularJS, this refactor adds the ability to modify which streamers are listed and includes a greater range of information on each streamer.
 
 ## Quickstart
 
