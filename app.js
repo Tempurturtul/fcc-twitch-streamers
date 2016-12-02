@@ -1,14 +1,16 @@
 $(document).ready(function() {
 
-  var url = 'https://api.twitch.tv/kraken/streams/',
-      callback = '?callback=?',
+  var clientID = '3wr9mvwxdv441l8gs64i4gx3v0df5t',
+      url = 'https://api.twitch.tv/kraken/streams/',
+      queryString = '?client_id=' + clientID + '&callback=?',
       streams = ["freecodecamp", "medrybw", "storbeck", "lirik", "oshi7", "rekkles", "cohhcarnage", "esl_lol", "richard_hammer"];
 
   streams.forEach(function(stream) {
     var streaming, name, status, logo, channel;
-    $.getJSON(url + stream + callback, function(data) {
+    $.getJSON(url + stream + queryString, function(data) {
+
       streaming = data.stream !== null;
-      $.getJSON(data._links.channel + callback, function(channelData) {
+      $.getJSON(data._links.channel + queryString, function(channelData) {
         name = channelData.display_name;
         status = channelData.status || '';
         logo = channelData.logo;
